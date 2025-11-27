@@ -1,7 +1,5 @@
 # 🐳 Guide Docker - Contact App
 
-Guide complet pour déployer Contact App avec Docker.
-
 ---
 
 ## 📋 Prérequis
