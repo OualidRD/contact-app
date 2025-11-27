@@ -13,8 +13,6 @@ Contact App est une application full-stack permettant de :
 - ✅ **Modifier** les informations
 - ✅ **Supprimer** avec confirmation
 - ✅ **Rechercher** en temps réel
-- ✅ **Filtrer** par ville
-- ✅ **Dark Mode** clair/sombre
 
 ---
 
