@@ -488,11 +488,6 @@ npm run dev
 
 ---
 
-## 🧪 Tests
-
-
----
-
 ---
 
 ## 🐛 Troubleshooting
