@@ -2,7 +2,6 @@
 
 Une application web complète de gestion de contacts (CRUD) moderne, intuitive et performante.
 
-**[Live Demo](#-démarrage-rapide)** • **[Stack Tech](#-stack-technique)** • **[Architecture](#-architecture)** • **[API](#-api-rest)** • **[Installation](#-installation)**
 
 ---
 
@@ -16,12 +15,6 @@ Contact App est une application full-stack permettant de :
 - ✅ **Rechercher** en temps réel
 - ✅ **Filtrer** par ville
 - ✅ **Dark Mode** clair/sombre
-
-### Screenshots
-
-| Écran d'accueil | Créer Contact | Dark Mode |
-|---|---|---|
-| ![Home](./screenshots/home.jpg) | ![Form](./screenshots/form.jpg) | ![Dark](./screenshots/dark.jpg) |
 
 ---
 
@@ -114,8 +107,7 @@ contact-app/
 │   │   └── ContactAppApplication.java
 │   ├── src/main/resources/
 │   │   └── application.properties              # Configuration
-│   ├── pom.xml                                 # Maven configuration
-│   └── Dockerfile
+│   ├── pom.xml                                 # Maven 
 │
 ├── frontend/                     # React UI
 │   ├── src/
@@ -125,7 +117,6 @@ contact-app/
 │   │   │   ├── ContactList.tsx                 # Grille de contacts
 │   │   │   ├── ErrorMessage.tsx                # Messages d'erreur
 │   │   │   ├── LoadingSpinner.tsx              # Indicateur chargement
-│   │   │   └── ThemeToggle.tsx                 # Basculeur thème
 │   │   ├── services/
 │   │   │   └── contactService.ts               # API client (Axios)
 │   │   ├── store/
@@ -144,12 +135,7 @@ contact-app/
 │   ├── vite.config.ts                          # Vite configuration
 │   ├── tsconfig.json                           # TypeScript configuration
 │   ├── index.html
-│   ├── vercel.json                             # Vercel deployment
-│   └── Dockerfile
-│
-├── docker-compose.yml                          # Docker stack (Backend + DB)
 ├── README.md                                   # Ce fichier
-├── .env.example                                # Variables d'environnement
 └── .gitignore
 ```
 
@@ -199,7 +185,6 @@ contact-app/
 App (Main)
 ├── Header
 │   ├── Logo
-│   └── ThemeToggle (Dark/Light)
 ├── Main Content
 │   ├── SearchBar
 │   └── ContactList (Grid Layout)
@@ -233,9 +218,6 @@ useContactStore
     ├── searchContacts()
     └── ...
 
-useThemeStore
-├── theme: 'light' | 'dark'
-└── toggleTheme()
 ```
 
 ---
@@ -420,7 +402,6 @@ const validateForm = (): boolean => {
 
 ### Design Minimaliste Professionnel
 - 📐 **Grille Responsive** : 1 colonne (mobile), 2 colonnes (tablet), 3 colonnes (desktop)
-- 🌓 **Dark Mode** : Basculeur thème clair/sombre avec persistance
 - ⚡ **Animations Fluides** : Fade-in (0.3s), Slide-up (0.3s)
 - 🎯 **Feedback Utilisateur** : Loading spinner, messages d'erreur, toasts de succès
 - 🔍 **Recherche Temps Réel** : Filtrage instantané des contacts
@@ -447,11 +428,6 @@ const validateForm = (): boolean => {
 - Loading state avec spinner
 - Re-render optimisé
 
-**ThemeToggle**
-- Icône lune/soleil
-- Bascule instantanée
-- Persistance localStorage
-- Respecte préférences système
 
 ---
 
@@ -485,64 +461,9 @@ npm install
 # Mode développement avec HMR
 npm run dev
 
-# Build pour production
-npm run build
-
-# Aperçu du build production
-npm run preview
-
-# Linting (vérification du code)
-npm run lint
 ```
 
-### Docker
 
-```bash
-# Lancer le stack complet (Backend + PostgreSQL)
-docker-compose up -d
-
-# Arrêter
-docker-compose down
-
-# Logs en direct
-docker-compose logs -f
-```
-
----
-
-## 🚀 Déploiement
-
-### Backend (Heroku)
-
-```bash
-# 1. Créer un compte Heroku et installer CLI
-# 2. Login
-heroku login
-
-# 3. Créer une app
-heroku create mon-contact-app
-
-# 4. Ajouter PostgreSQL
-heroku addons:create heroku-postgresql:hobby-dev
-
-# 5. Déployer
-git push heroku main
-```
-
-### Frontend (Vercel)
-
-```bash
-# 1. Installer Vercel CLI
-npm install -g vercel
-
-# 2. Déployer
-vercel
-
-# 3. Configurer les variables d'environnement
-# VITE_API_URL=https://mon-contact-app.herokuapp.com/api
-```
-
----
 
 ## 🔐 Sécurité
 
@@ -571,32 +492,8 @@ vercel
 
 ## 🧪 Tests
 
-### Structure prête pour les tests
-
-**Backend (JUnit + Mockito):**
-```
-src/test/java/com/raidi/contact_app/
-├── service/ContactServiceTest.java
-├── controller/ContactControllerTest.java
-└── repository/ContactRepositoryTest.java
-```
-
-**Frontend (Jest + React Testing Library):**
-```
-src/__tests__/
-├── components/ContactCard.test.tsx
-├── components/ContactForm.test.tsx
-└── store/store.test.ts
-```
 
 ---
-
-## 📚 Documentation Additionnelle
-
-Pour plus de détails :
-- **[Architecture Complète](./ARCHITECTURE.md)** - Décisions techniques approfondies
-- **[Backend README](./backend/README.md)** - Configuration Spring Boot
-- **[Frontend README](./frontend/README.md)** - Guide des composants React
 
 ---
 
@@ -645,13 +542,12 @@ npm install
 └─ Total                : 97
 
 ⏱️ Development Time
-└─ ~6 heures de développement
+└─ ~5 heures de développement
 
 ✅ Feature Completion
 ├─ CRUD Complet        : 100%
 ├─ UI/UX Design        : 100%
 ├─ API REST            : 100%
-├─ Dark Mode           : 100%
 ├─ Responsive Design   : 100%
 ├─ Validation          : 100%
 └─ Documentation       : 100%
@@ -683,40 +579,22 @@ npm install
 
 ---
 
-## 📝 Licence
-
-MIT License - Libre d'utilisation
-
----
 
 ## 👨‍💼 À Propos
 
-**Développeur** : OualidRD  
-**Date** : Novembre 2025  
-**Status** : ✅ Complété et Production-Ready  
+**Étudiant en dernière année de Génie Logiciel**  
+Casablanca, Maroc
+
+📧 [oualidraidi0@gmail.com](mailto:oualidraidi0@gmail.com)  
+📱 +212 620 726 234 
+🔗 [GitHub](https://github.com/OualidRD) | [LinkedIn](https://www.linkedin.com/in/oualid-raidi/) | [Portfolio](https://raidioualid.vercel.app/)
+  
 
 ---
 
-## 📞 Support
 
-Pour toute question ou problème :
-1. Consultez la documentation ci-dessus
-2. Vérifiez les logs (console du navigateur ou backend)
-3. Ouvrez une issue sur GitHub
-
----
-
-**Merci de votre intérêt pour Contact App!** 🚀
+**Merci de votre intérêt pour Mon Profil** 🚀
 
 Fait avec ❤️ pour la gestion de contacts moderne.
 
 ---
-
-### Quick Links
-
-- 🚀 [Démarrage Rapide](#-démarrage-rapide)
-- 🏗️ [Architecture](#-architecture)
-- 🔌 [API REST](#-api-rest)
-- 📚 [Stack Technique](#-stack-technique)
-- 📁 [Structure](#-structure-du-projet)
-- 🐛 [Troubleshooting](#-troubleshooting)
